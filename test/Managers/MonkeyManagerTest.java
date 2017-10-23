@@ -17,7 +17,7 @@ public class MonkeyManagerTest {
     public void setUp() throws Exception {
         monkeyManager = new MonkeyManager();
         treeManager = new TreeManager();
-        bananaTree = treeManager.getBabanaTree();
+        bananaTree = treeManager.getBananaTree();
         coconutTree = treeManager.getCoconutTree();
         fruitTree = treeManager.getFruitsTree();
     }

@@ -1,9 +1,6 @@
 package Managers;
 
-import Fruit.*;
-import Tree.BananaBranch;
 import Tree.Branch;
-import Tree.CoconutBranch;
 import Monkey.Monkey;
 
 /**
@@ -22,29 +19,8 @@ public class MonkeyManager {
      * @return count of bananas
      */
     public int countBananas(Branch branch) {
-        bananaMonkey = new Monkey() {
-            int bananaCount = 0;
-
-            @Override
-            public int countFruits(Branch branch) {
-                if (branch instanceof CoconutBranch) {
-                    return 0;
-                } else {
-                    for (Fruit fruit : branch.getFruits()) {
-                        if (fruit instanceof Banana) {
-                            bananaCount += branch.getFruits().size();
-                        }
-                    }
-                    if (!branch.getBranches().isEmpty()) {
-                        for (Branch childBranch : branch.getBranches()) {
-                            countFruits(childBranch);
-                        }
-                    }
-                    return bananaCount;
-                }
-            }
+        bananaMonkey = new Monkey("Banana") {
         };
-
         return bananaMonkey.countFruits(branch);
     }
 
@@ -55,29 +31,8 @@ public class MonkeyManager {
      * @return count of coconuts
      */
     public int countCoconuts(Branch branch) {
-        coconutMonkey = new Monkey() {
-            int coconutCount = 0;
-
-            @Override
-            public int countFruits(Branch branch) {
-                if (branch instanceof BananaBranch) {
-                    return 0;
-                } else {
-                    for (Fruit fruit : branch.getFruits()) {
-                        if (fruit instanceof Coconut) {
-                            coconutCount += branch.getFruits().size();
-                        }
-                    }
-                    if (!branch.getBranches().isEmpty()) {
-                        for (Branch childBranch : branch.getBranches()) {
-                            countFruits(childBranch);
-                        }
-                    }
-                    return coconutCount;
-                }
-            }
+        coconutMonkey = new Monkey("Coconut") {
         };
-
         return coconutMonkey.countFruits(branch);
     }
 
@@ -89,21 +44,6 @@ public class MonkeyManager {
      */
     public int countAllFruits(Branch branch) {
         allFruitsMonkey = new Monkey() {
-            int fruitCount = 0;
-
-            @Override
-            public int countFruits(Branch branch) {
-
-                for (Fruit fruit : branch.getFruits()) {
-                    fruitCount += branch.getFruits().size();
-                }
-                if (!branch.getBranches().isEmpty()) {
-                    for (Branch childBranch : branch.getBranches()) {
-                        countFruits(childBranch);
-                    }
-                }
-                return fruitCount;
-            }
         };
         return allFruitsMonkey.countFruits(branch);
     }

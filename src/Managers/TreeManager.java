@@ -19,7 +19,7 @@ public class TreeManager {
         return mainFruitsBranch;
     }
 
-    public Branch getBabanaTree() {
+    public Branch getBananaTree() {
         Branch mainBananaBranch = new BananaBranch();
         growTree(mainBananaBranch, 3);
         return mainBananaBranch;
@@ -37,7 +37,7 @@ public class TreeManager {
      * @param branch current branch for fixing other branches
      * @param level  branch nesting level
      */
-    public void addBranches(Branch branch, int level) {
+    private void addBranches(Branch branch, int level) {
         branch.addBranch(random.nextInt(10));
         if (level > 0) {
             for (Branch childBranch : branch.getBranches()) {
@@ -51,7 +51,7 @@ public class TreeManager {
      *
      * @param branch a branch to which fruits will be added
      */
-    public void addFruits(Branch branch) {
+    private void addFruits(Branch branch) {
         branch.addFruits(random.nextInt(10));
         if (!branch.getBranches().isEmpty()) {
             for (Branch childBranch : branch.getBranches()) {
@@ -66,7 +66,7 @@ public class TreeManager {
      * @param branch a branch to which fruits and other branches will be added
      * @param level  branch nesting level
      */
-    public void growTree(Branch branch, int level) {
+    private void growTree(Branch branch, int level) {
         addBranches(branch, level);
         addFruits(branch);
     }
