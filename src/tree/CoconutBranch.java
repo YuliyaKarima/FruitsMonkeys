@@ -1,6 +1,6 @@
-package Tree;
+package tree;
 
-import Fruit.*;
+import fruit.*;
 
 import java.util.ArrayList;
 import java.util.List;

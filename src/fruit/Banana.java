@@ -1,4 +1,4 @@
-package Fruit;
+package fruit;
 
 /**
  * Class Banana

@@ -1,6 +1,6 @@
-package Managers;
+package managers;
 
-import Tree.Branch;
+import tree.Branch;
 import org.junit.Before;
 import org.junit.Test;
 

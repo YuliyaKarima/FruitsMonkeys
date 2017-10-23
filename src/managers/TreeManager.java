@@ -1,14 +1,14 @@
-package Managers;
+package managers;
 
-import Tree.BananaBranch;
-import Tree.Branch;
-import Tree.CoconutBranch;
-import Tree.FruitsBranch;
+import tree.BananaBranch;
+import tree.Branch;
+import tree.CoconutBranch;
+import tree.FruitsBranch;
 
 import java.util.Random;
 
 /**
- * Tree factory
+ * tree factory
  */
 public class TreeManager {
     private Random random = new Random();

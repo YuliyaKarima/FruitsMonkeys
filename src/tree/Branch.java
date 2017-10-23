@@ -1,6 +1,6 @@
-package Tree;
+package tree;
 
-import Fruit.Fruit;
+import fruit.Fruit;
 
 import java.util.List;
 

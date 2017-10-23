@@ -1,11 +1,11 @@
-package Managers;
+package managers;
 
-import Tree.Branch;
-import Monkey.Monkey;
+import tree.Branch;
+import monkey.Monkey;
 
 /**
  * Class that provides methods for counting of fruits on different types of trees
- * with helps of monkeys(Monkey class anonymous realizations)
+ * with helps of monkeys(monkey class anonymous realizations)
  */
 public class MonkeyManager {
     private Monkey bananaMonkey;

@@ -1,8 +1,8 @@
-package MonkeyTest;
+package monkeyTest;
 
-import Managers.MonkeyManager;
-import Managers.TreeManager;
-import Tree.Branch;
+import managers.MonkeyManager;
+import managers.TreeManager;
+import tree.Branch;
 
 public class TestMonkeys {
 

@@ -1,10 +1,10 @@
-package Monkey;
+package monkey;
 
-import Fruit.*;
-import Tree.Branch;
+import fruit.*;
+import tree.Branch;
 
 /**
- * Abstract class Monkey provides method for counting fruits on a tree
+ * Abstract class monkey provides method for counting fruits on a tree
  */
 public abstract class Monkey {
 
@@ -16,7 +16,7 @@ public abstract class Monkey {
      */
     public Monkey(String fruitType) {
         try {
-            fruitClass = Class.forName("Fruit." + fruitType);
+            fruitClass = Class.forName("fruit." + fruitType);
         } catch (ClassNotFoundException e) {
             System.err.println("class not found");
         }
